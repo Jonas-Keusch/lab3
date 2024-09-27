@@ -20,5 +20,10 @@ def search(data, target_date):
 filename = 'budget_data.csv' 
 financial_data = load_data(filename)
 
-date = input("Input date you would like data for.")
+target_date = "Feb-10"
 result = search(financial_data, date)
+
+if result is not None:
+    print(f"Profit/Loss on {target_date}: {result}")
+else:
+    print(f"No data found for the date: {target_date}")
